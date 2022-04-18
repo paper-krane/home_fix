@@ -1,0 +1,83 @@
+*, *:before, *:after {
+    box-sizing: border-box !important;
+}
+html {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: $site-bg; 
+    
+    body {
+        overflow-x: hidden;
+    }
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: $font-stack;
+}
+
+.text-primary {
+    color: $orange;
+}
+
+
+// Links
+a, a:visited {
+    color: $primary-color;
+    -webkit-tap-highlight-color: transparent;
+    transition: $transition;
+}
+a:hover, a:focus {
+    color: $secondary-color;
+}
+a *, button * {
+    pointer-events: none;
+}
+
+
+// Text selection
+::selection {
+    background: $light-grey;
+}
+::-moz-selection {
+    background: $light-grey;
+}
+
+
+// Images
+img,
+video {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+// Helper styles
+.hf__layer {
+    @media #{$l-and-up} {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+
+        * {
+            pointer-events: auto;
+        }
+    }
+}
+
+.hf__container {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+
+    @media #{$xxl-and-up} {
+        width: 80%;
+    }
+}

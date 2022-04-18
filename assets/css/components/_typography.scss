@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'emithascript';
+    src: url('emitha-script-webfont.woff2') format('woff2'),
+         url('emitha-script-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-size: 1.1rem;
+    font-family: $font-stack;
+    font-weight: $font-weight;
+    line-height: 1.7;
+    color: $font-color;
+    
+    @media #{$l-and-up} {
+        font-size: 1.2rem;
+    }
+}
+
+.text-gradient {
+    background: $primary-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-orange {
+    color: $orange;
+}
+
+//Links
+a {
+    text-decoration: none;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+	font-weight: $heading-font-weight;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-family: $heading-font-stack;
+
+    .heading-accent {
+        font-weight: 400;
+        font-size: .625rem;
+        text-transform: uppercase;
+        letter-spacing: .25rem;
+        font-family: $font-stack;
+        display: block;
+        line-height: 1.5;
+        color: $font-accent-color;
+        margin-bottom: .5rem;
+    }
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    font-weight: inherit;
+}
+h1 {
+    font-size: $h1-fontsize-mobile;
+    line-height: 1.3;
+    @media #{$l-and-up} {
+        font-size: $h1-fontsize;
+    }
+    @media #{$xl-and-up} {
+        font-size: $h1-fontsize-desktop;
+    }
+}
+h2 {
+    font-size: $h2-fontsize-mobile;
+    line-height: 1.3;
+    @media #{$l-and-up} {
+        font-size: $h2-fontsize;
+    }
+    @media #{$xl-and-up} {
+        font-size: $h2-fontsize-desktop;
+    }
+}
+h3 {
+    font-size: $h3-fontsize-mobile;
+    line-height: 1.3;
+    @media #{$l-and-up} {
+        font-size: $h3-fontsize;
+    }
+    @media #{$xl-and-up} {
+        font-size: $h3-fontsize-desktop;
+    }
+}
+h4 {
+    font-size: $h4-fontsize-mobile;
+    line-height: 1.3;
+    @media #{$l-and-up} {
+        font-size: $h4-fontsize;
+    }
+    @media #{$xl-and-up} {
+        font-size: $h4-fontsize-desktop;
+    }
+}
+h5 {
+    font-size: $h5-fontsize-mobile;
+    line-height: 1.3;
+    @media #{$l-and-up} {
+        font-size: $h5-fontsize;
+    }
+    @media #{$xl-and-up} {
+        font-size: $h5-fontsize-desktop;
+    }
+}
+h6 {
+    font-size: $h6-fontsize-mobile;
+    line-height: 1.3;
+    @media #{$l-and-up} {
+        font-size: $h6-fontsize;
+    }
+    @media #{$xl-and-up} {
+        font-size: $h6-fontsize-desktop;
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.4;
+}
+
+.hf__header-line {
+    position: relative;
+    line-height: 1.4;
+    
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 7rem;
+        height: 2px;
+        background-color: $orange;
+    }
+}

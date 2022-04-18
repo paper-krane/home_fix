@@ -1,0 +1,74 @@
+// Media Queries
+$mobile-screen: 599.98px !default;
+$tablet-screen-down: 991.98px !default;
+$desktop-screen-down: 1279.98px !default;
+$desktop-large-screen-down: 1599.98px !default;
+$mobile-landscape-screen-up: 600px !default;
+$tablet-landscape-screen-up: 992px !default;
+$desktop-screen-up: 1280px !default;
+$desktop-large-screen-up: 1600px !default;
+$desktop-extra-large-screen-up: 2000px !default;
+
+$s-and-down: "only screen and (max-width : #{$mobile-screen})" !default;
+$m-and-down: "only screen and (max-width : #{$tablet-screen-down})" !default;
+$l-and-down: "only screen and (max-width : #{$desktop-screen-down})" !default;
+$xl-and-down: "only screen and (max-width : #{$desktop-large-screen-down})" !default;
+$m-and-up: "only screen and (min-width : #{$mobile-landscape-screen-up})" !default;
+$l-and-up: "only screen and (min-width : #{$tablet-landscape-screen-up})" !default;
+$xl-and-up: "only screen and (min-width : #{$desktop-screen-up})" !default;
+$xxl-and-up: "only screen and (min-width : #{$desktop-large-screen-up})" !default;
+$xxxl-and-up: "only screen and (min-width : #{$desktop-extra-large-screen-up})" !default;
+
+// Colors 
+$site-bg: #ffffff !default;
+$font-color: #121416 !default;
+$font-accent-color: #505050 !default;
+$heading-font-color: #121416 !default;
+$primary-color: #3589fc !default;
+$secondary-color: #00aee7 !default;
+$primary-gradient: linear-gradient(225deg,$primary-color,$secondary-color);
+$orange: #f27c00 !default;
+$light-grey: #b2bdc4 !default;
+$deep-grey: #21232b !default;
+$dark-grey: #14141b !default;
+$grey-gradient: radial-gradient(circle at 0 0,$deep-grey 0,$dark-grey 100%);
+
+// Fonts
+$font-stack: 'Neue Haas Grotesk Display Pro', sans-serif !default;
+$font-weight: 400 !default;
+$heading-font-stack: 'Neue Haas Grotesk Display Pro', sans-serif !default;
+$heading-font-weight: 700 !default;
+
+$h1-fontsize-mobile: 2.25rem !default;
+$h2-fontsize-mobile: 2rem !default;
+$h3-fontsize-mobile: 1.75rem !default;
+$h4-fontsize-mobile: 1.5rem !default;
+$h5-fontsize-mobile: 1.25rem !default;
+$h6-fontsize-mobile: 1.15rem !default;
+$h1-fontsize: 3.5rem !default;
+$h2-fontsize: 3.25rem !default;
+$h3-fontsize: 2.75rem !default;
+$h4-fontsize: 2.5rem !default;
+$h5-fontsize: 1.75rem !default;
+$h6-fontsize: 1.5rem !default;
+$h1-fontsize-desktop: $h1-fontsize !default;
+$h2-fontsize-desktop: $h2-fontsize !default;
+$h3-fontsize-desktop: $h3-fontsize !default;
+$h4-fontsize-desktop: $h4-fontsize !default;
+$h5-fontsize-desktop: $h5-fontsize !default;
+$h6-fontsize-desktop: $h6-fontsize !default;
+
+// Design Rules
+$transition: all 0.4s ease !default;
+
+// Buttons
+$btn-border-radius: 64px;
+$btn-height: 52px;
+$btn-padding: 2rem;
+$btn-large-padding: 2.25rem;
+$btn-small-padding: 1.5rem;
+
+// Forms 
+$label-color: #9a9a9a;
+$placeholder-color: #8a8a8a;
+$form-border-color: #6a6a6a;
