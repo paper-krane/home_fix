@@ -102,6 +102,7 @@ class HF {
         this.mobileHeadroom();
         this.desktopHeadroom();
         this.heroParallax();
+        this.portfolioSlider();
     }
 
     // Nav toggle
@@ -252,6 +253,23 @@ class HF {
                 });
             });
         }
+    }
+
+    // Slider 1 
+    portfolioSlider() {
+        const slider = tns({
+            container: '#hf__portfolio-slider-inner',
+            items: 1,
+            controls: false,
+            nav: true,
+            navContainer: '#hf__portfolio-slider-nav',
+            autoplay: false,
+            mouseDrag: true,
+            gutter: 64,
+            rewind: true,
+            loop: false,
+            speed: 800
+          });
     }
 }
 

@@ -447,7 +447,7 @@
     padding-bottom: 108px;
     position: relative;
 
-    &:before {
+    &:after {
         content: "";
         height: 100%;
         width: 100%;
@@ -457,9 +457,53 @@
         background: linear-gradient(180deg,rgba(191,192,192,0),$light-grey);
         opacity: .15;
         pointer-events: none;
+        z-index: 3;
+    }
+
+    .hf__ghost-text {
+        top: -.75rem;
+    
+        @media #{$m-and-up} {
+            top: -2rem;
+        }
+    
+        @media #{$l-and-up} {
+            top: -5rem;
+        }
+    }
+
+    #hf__portfolio-description {
+        margin-bottom: 32px;
+    }
+
+    #hf__portfolio-slider-nav {
+        text-align: center;
+        margin-top: 32px;
+
+        span {
+            display: inline-block;
+            width: 20px;
+            height: 4px;
+            background-color: $light-grey;
+            cursor: pointer;
+            transition: all 0.4s ease;
+
+            &.tns-nav-active {
+                background-color: $deep-grey;
+            }
+        }
+    }
+
+    #hf__portfolio-slider-inner {
+        img {
+            display: block;
+            width: 100%;
+        }
     }
 
     @media #{$l-and-up} {
+        margin-top: 156px;
+
         .hf__container {
             display: flex;
             flex-wrap: wrap;
@@ -472,6 +516,8 @@
                 position: relative;
                 z-index: 1;
                 padding-right: 16px;
+                margin-bottom: 0;
+                z-index: 2;
             }
 
             #hf__portfolio-slider {
@@ -480,6 +526,23 @@
                 flex: 0 0 60%;
                 -ms-flex: 0 0 60%;
                 max-width: 60%;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 100%;
+                    transform: translate(0, -50%);
+                    -webkit-transform: translate(0, -50%);
+                    width: 200%;
+                    height: 102%;
+                    background-color: $site-bg;
+                    z-index: 1;
+                }
+
+                .tns-ovh {
+                    overflow: visible;
+                }
             }
         }
     }
@@ -497,6 +560,13 @@
                 -ms-flex: 0 0 70%;
                 max-width: 70%;
             }
+        }
+    }
+
+    @media #{$xxxl-and-up} {
+        .hf__container {
+            width: 70%;
+            margin: 0 auto;
         }
     }
 }
